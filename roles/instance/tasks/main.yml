@@ -3,11 +3,12 @@
   ec2:
     key_name: "{{ key_name }}"
     image: "{{ image }}"
-    instance_type: t2.micro
+    instance_type: t2.nano
     region: "{{ region }}"
     vpc_subnet_id: "{{vpc_subnet_id}}"
     group_id: "{{sec_group}}"
     instance_tags:
       Name: "{{instance_name}}"
+      SWQA: DevOps
     wait: true
     count: 1
